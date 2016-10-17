@@ -30,8 +30,7 @@ Describe and show how to run the tests with code examples.
 ## Contributors
 
 ##### Designer, Architect, Developer:
-###### Shelby Solomon
-I may be reached at [shelby@shelbysolomon.net](mailto:shelby@shelbysolomon.net) or on Twitter at [@shelbythedev](http://twitter.com/shelbythedev).
+Shelby Solomon may be reached at [shelby@shelbysolomon.net](mailto:shelby@shelbysolomon.net) or on Twitter at [@shelbythedev](http://twitter.com/shelbythedev).
 
 ## License
 
