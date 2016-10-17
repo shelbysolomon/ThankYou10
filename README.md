@@ -1,5 +1,8 @@
 # **ThankYou10**
 
+Current stable release: **_unreleased_**
+Most recent version (may not be stable): **0.0.1**
+
 *ThankYou10* is a Rails-based application for team collaboration in the theater, stage, concert, worship, etc. industries. It is using Ruby and AngularJS on top of the Rails platform to allow a robust, clean codebase and an efficient application for the end-user.
 
 ## Motivation
