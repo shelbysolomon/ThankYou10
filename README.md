@@ -8,12 +8,12 @@
 
 ## Installation
 
-This application is running with:
-Ruby 2.3.1
-Rails 5.0.0
-MySQL2 0.3.18
-Puma 3.0
-Sass-Rails 5.0
+This application is running with:  
+Ruby 2.3.1  
+Rails 5.0.0  
+MySQL2 0.3.18  
+Puma 3.0  
+Sass-Rails 5.0  
 
 ## Contributors
 
