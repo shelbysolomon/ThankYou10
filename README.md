@@ -29,8 +29,9 @@ Describe and show how to run the tests with code examples.
 
 ## Contributors
 
-###### *to do*
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+###### Designer & Architect
+Shelby Solomon
+I may be reached at [shelby@shelbysolomon.net](mailto:shelby@shelbysolomon.net) or on Twitter at [@shelbythedev](http://twitter.com/shelbythedev).
 
 ## License
 
