@@ -7,7 +7,7 @@ Most recent version (may not be stable): **0.0.1**
 
 ## Motivation
 
-*ThanYou10* was created to provide a solution for a need for a unified collaboration tool in the stage and entertainment industries. We wanted to create a place where team members can communicate, share notes, provide feedback, and study their roles in an efficient, easy-to-use manner.
+*ThankYou10* was created to provide a solution for a need for a unified collaboration tool in the stage and entertainment industries. We wanted to create a place where team members can communicate, share notes, provide feedback, and study their roles in an efficient, easy-to-use manner.
 
 ## Installation
 
