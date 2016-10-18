@@ -20,7 +20,7 @@
 
   <div class="permission">
     <%= f.label :permission %><br />
-    <%= f.text_field :permission %>
+    <%= f.select :permission, User.permission_list %>
   </div>
 
   <div class="field">

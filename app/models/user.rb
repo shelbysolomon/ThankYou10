@@ -4,6 +4,17 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  belongs_to :company
-  accepts_nested_attributes_for :company
+  has_one :company
+  validates :first_name, :last_name, presence: true
+
+  # Enum for user permission levels (admin: 0, editor: 1, viewer: 2)
+  enum permission: [:administrator, :editor, :viewer]
+
+  def self.permission_list
+    return [
+      ["Administrator", :administrator],
+      ["Editor", :editor],
+      ["Viewer", :viewer]
+    ]
+  end
 end
