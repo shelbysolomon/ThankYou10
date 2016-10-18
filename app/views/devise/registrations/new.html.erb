@@ -5,7 +5,7 @@
   <%= devise_error_messages! %>
 
   <%= f.fields_for resource.company do |company_form| %>
-    <div><%= company_form.label :name %><br />
+    <div><%= company_form.label 'Company Name' %><br />
     <%= company_form.text_field :name %></div>
   <% end %>
 
