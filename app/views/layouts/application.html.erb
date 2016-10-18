@@ -8,10 +8,69 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <body class="page-body">
+    <div class="page-container">
+      <!-- Start sidebar -->
+      <div class="sidebar-menu">
+        <div class="sidebar-menu-inner">
+          <header class="logo-env">
+            <div class="logo">
+              <%= link_to root_path do %>
+                <%= image_tag "thankyou10_logo_150w.png" %>
+              <% end %>
+            </div>
 
-    <%= yield %>
+            <div class="sidebar-collapse">
+              <%= link_to '#', class: 'sidebar-collapse-icon' do %>
+                <i class="fa fa-bars"></i>
+              <% end %>
+            </div>
+
+            <div class="sidebar-mobile-menu visible-xs">
+              <%= link_to '#', class: 'with-animation' do %>
+                <i class="fa fa-bars"></i>
+              <% end %>
+            </div>
+          </header>
+
+          <!-- Side menu area -->
+          <ul id="main-menu" class="main-menu">
+          </ul>
+          <!-- End menu area -->
+        </div>
+      </div>
+      <!-- End sidebar -->
+
+      <div class="main-content">
+        <div class="row">
+          <!-- Left header area -->
+          <div class="col-md-6 col-sm-8 clearfix">
+            <ul class="user-info pull-left pull-none-xsm">
+              <li><%= current_user.name %></li>
+            </ul>
+          </div>
+          <!-- End left header area -->
+
+          <!-- Right header area -->
+          <div class="col-md-6 col-sm-4 cleaarfix hidden-xs">
+            <ul class="list-inline list-links pull-right">
+              <li>
+                <%= link_to destroy_user_session_path do %>
+                  <i class="fa fa-sign-out"></i> Log Out
+                <% end %>
+              </li>
+            </ul>
+          </div>
+          <!-- End right header area -->
+        </div>
+        <hr />
+
+        <!-- Flash notices -->
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
