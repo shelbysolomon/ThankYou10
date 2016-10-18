@@ -1,17 +1,31 @@
 <h2>Sign up</h2>
 
-<% resource.company ||= Company.new %>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <%= f.fields_for resource.company do |company_form| %>
-    <div><%= company_form.label 'Company Name' %><br />
-    <%= company_form.text_field :name %></div>
-  <% end %>
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :role %><br />
+    <%= f.text_field :role %>
+  </div>
+
+  <div class="permission">
+    <%= f.label :permission %><br />
+    <%= f.text_field :permission %>
+  </div>
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email %>
   </div>
 
   <div class="field">
