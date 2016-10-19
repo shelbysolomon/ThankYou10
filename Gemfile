@@ -56,3 +56,6 @@ gem 'cancan'
 
 # Font Awesome icons
 gem 'font-awesome-sass'
+
+# Paperclip for image management
+gem "paperclip", "~> 5.0.0"
