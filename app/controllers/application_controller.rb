@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # Allow custom params in devise forms
   before_action :configure_permitted_parameters, if: :devise_controller?
   # Use 'login' layout for all devise views
-  layout :layout_by_resource, if: :devise_controller?
+  # layout :layout_by_resource, if: :devise_controller?
 
   protected
 
@@ -17,12 +17,12 @@ class ApplicationController < ActionController::Base
       end
     end
 
-    def layout_by_resource
-      if devise_controller?
-        'login'
-      else
-        'application'
-      end
-    end
+    # def layout_by_resource
+    #   if devise_controller?
+    #     'login'
+    #   else
+    #     'application'
+    #   end
+    # end
 
 end
