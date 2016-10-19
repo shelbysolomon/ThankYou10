@@ -8,7 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="page-body">
+  <body class="page-body gray">
     <div class="page-container">
       <!-- Start sidebar -->
       <div class="sidebar-menu">
@@ -59,6 +59,7 @@
           <!-- Right header area -->
           <div class="col-md-6 col-sm-4 cleaarfix hidden-xs">
             <ul class="list-inline list-links pull-right">
+              <li><%= current_user.company.name %></li>
             </ul>
           </div>
           <!-- End right header area -->
