@@ -10,7 +10,11 @@ class ApplicationController < ActionController::Base
     # Allow additional fields in Devise auth forms
     def configure_permitted_parameters
       # Devise sign up form:
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :role, :permission, company_attributes: [:name]])
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :role, :permission, :avatar, company_attributes: [:name]])
+      # Edit user form
+      devise_parameter_sanitizer.permit(:account_update) do |i|
+        i.permit(:first_name, :last_name, :role, :avatar, :permission, :email, :password, :password_confirmation, :current_password, :company_attributes)
+      end
     end
 
     def layout_by_resource

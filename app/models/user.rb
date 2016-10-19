@@ -8,6 +8,9 @@ class User < ApplicationRecord
   validates :first_name, :last_name, presence: true
   accepts_nested_attributes_for :company
 
+  has_attached_file :avatar, styles: { xsmall: "32x32!", small: "64x64!", med: "100x100!", large: "200x200!"}, default_url: "/images/:style/missing.png"
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
+
   # Enum for user permission levels (admin: 0, editor: 1, viewer: 2)
   enum permission: [:administrator, :editor, :viewer]
 

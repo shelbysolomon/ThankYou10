@@ -4,6 +4,38 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.fields_for :company do |builder| %>
+      <%= builder.label 'Company name' %>
+      <%= builder.text_field :name %>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :role %><br />
+    <%= f.text_field :role %>
+  </div>
+
+  <div class="field">
+    <%= f.label :avatar %><br />
+    <%= f.file_field :avatar %>
+  </div>
+
+  <div class="permission">
+    <%= f.label :permission %><br />
+    <%= f.select :permission, User.permission_list %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
