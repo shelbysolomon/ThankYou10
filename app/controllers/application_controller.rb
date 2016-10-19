@@ -1,6 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  # Allow custom params in devise forms
   before_action :configure_permitted_parameters, if: :devise_controller?
+  # Use 'login' layout for all devise views
+  layout :layout_by_resource, if: :devise_controller?
 
   protected
 
