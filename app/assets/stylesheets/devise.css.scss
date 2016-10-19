@@ -1,0 +1,29 @@
+@import 'custom';
+
+.devise-layout {
+  background-color: $navyblue;
+  color: #fff;
+
+  #logo {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .login {
+    margin: 25px;
+  }
+
+  .well {
+    background-color: rgba(200,200,200,0.08);
+    border: none;
+  }
+
+  footer {
+    bottom: 25px;
+    position: absolute;
+    width: 100%;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 15px;
+  }
+}
