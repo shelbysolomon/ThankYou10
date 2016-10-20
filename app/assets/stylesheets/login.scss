@@ -1,0 +1,29 @@
+@import 'custom';
+
+.main-logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.login-heading {
+  color: #878787;
+
+  h1 {
+    color: #fff;
+  }
+
+  p {
+    color: #fff;
+    margin: 20px;
+  }
+}
+
+.remember-me {
+  color: #878787;
+}
+
+footer.main.login {
+  padding: 20px;
+  border: none;
+  color: #878787;
+}
