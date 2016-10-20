@@ -21,9 +21,7 @@
             </div>
 
             <div class="sidebar-collapse">
-              <%= link_to '#', class: 'sidebar-collapse-icon' do %>
-                <i class="fa fa-bars"></i>
-              <% end %>
+              <a class="sidebar-collapse-icon"><i class="fa fa-bars"></i></a>
             </div>
 
             <div class="sidebar-mobile-menu visible-xs">
@@ -50,14 +48,14 @@
             </li>
 
             <li class="has-sub root-level">
-              <%= link_to productions_path(current_user.company) do %>
+              <a>
                 <i class="fa fa-ticket"></i>
                 <span class="title">Productions</span>
-              <% end %>
-
+              </a>
+              
               <ul>
-                <% if !current_user.company.productions %>
-                  <li><span class="title">No productions found</span></li>
+                <% if current_user.company.productions.blank? %>
+                  <li><a><span class="title">No productions found</span></a></li>
                 <% else %>
                   <% current_user.company.productions.each do |production| %>
                     <li>
