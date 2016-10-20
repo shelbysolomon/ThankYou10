@@ -8,9 +8,16 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="page-body login-form">
+  <body class="page-body login-page login-form login-form-fall login-form-fall-init">
+    <div class="login-container">
+      <div class="login-header login-caret">
+        <h1>ThankYou10</h1>
+      </div>
 
-    <%= yield %>
+      <div class="login-form">
+        <%= yield %>
+      </div>
+    </div>
 
     <footer class="main">
       &copy; 2016 <strong>ThankYou10</strong> by <a href="http://shelbysolomon.net" target="_blank">Shelby Solomon</a>
