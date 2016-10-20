@@ -1213,7 +1213,7 @@ fieldset[disabled] .btn-default.focus {
 }
 .btn-primary {
   color: #fff;
-  background-color: #303641;
+  background-color: #303641 !important;
   border-color: #252a32;
 }
 .btn-primary:focus,
@@ -3667,7 +3667,7 @@ hr + .mail-env {
 }
 .login-page .login-form .form-group .btn-login:hover,
 .login-page .login-form .form-group .btn-login:active {
-  background: #373e4a;
+  background: #373e4a !important;
 }
 .login-page .login-form .form-group .facebook-button,
 .login-page .login-form .form-group .twitter-button,
