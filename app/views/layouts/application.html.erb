@@ -52,7 +52,7 @@
                 <i class="fa fa-ticket"></i>
                 <span class="title">Productions</span>
               </a>
-              
+
               <ul>
                 <% if current_user.company.productions.blank? %>
                   <li><a><span class="title">No productions found</span></a></li>
@@ -88,7 +88,7 @@
               <li class="profile-info dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><%= image_tag current_user.avatar.url(:xsmall), class: "img-circle" unless current_user.avatar.url.nil? %><%= current_user.name %></a>
                 <ul class="dropdown-menu">
                   <li><%= link_to 'Edit my profile', edit_user_registration_path %></li>
-                  <li><%= link_to 'Sign out', destroy_user_session_path %></li>
+                  <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
                 </ul>
               </li>
             </ul>
