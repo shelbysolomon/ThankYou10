@@ -8,7 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="page-body gray">
+  <body class="page-body">
     <div class="page-container">
       <!-- Start sidebar -->
       <div class="sidebar-menu">
@@ -35,6 +35,47 @@
 
           <!-- Side menu area -->
           <ul id="main-menu" class="main-menu">
+            <li class="root-level">
+              <%= link_to root_path do %>
+                <i class="fa fa-dashboard"></i>
+                <span class="title">Dashboard</span>
+              <% end %>
+            </li>
+
+            <li class="root-level">
+              <%= link_to company_path(current_user.company) do %>
+                <i class="fa fa-building"></i>
+                <span class="title">Company</span>
+              <% end %>
+            </li>
+
+            <li class="has-sub root-level">
+              <%= link_to productions_path(current_user.company) do %>
+                <i class="fa fa-ticket"></i>
+                <span class="title">Productions</span>
+              <% end %>
+
+              <ul>
+                <% if !current_user.company.productions %>
+                  <li><span class="title">No productions found</span></li>
+                <% else %>
+                  <% current_user.company.productions.each do |production| %>
+                    <li>
+                      <%= link_to production_path(production) do %>
+                        <span class="title"><%= production.name %></span>
+                      <% end %>
+                    </li>
+                  <% end %>
+                <% end %>
+              </ul>
+            </li>
+
+            <li class="root-level">
+              <%= link_to users_path do %>
+                <i class="fa fa-users"></i>
+                <span class="title">Users</span>
+              <% end %>
+            </li>
           </ul>
           <!-- End menu area -->
         </div>
